@@ -8,15 +8,11 @@ import (
 	"strings"
 )
 
-func main() {
-	dup()
-}
-
 func dup() {
-	//dup1()
-	//dup2()
+	dup1()
+	dup2()
 	modifiedDup2()
-	//dup3()
+	dup3()
 }
 
 func dup1() {
