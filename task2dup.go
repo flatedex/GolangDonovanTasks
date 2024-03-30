@@ -57,12 +57,14 @@ func dup2() {
 	}
 }
 func modifiedDup2() {
-	counts := make(map[string]int)
+	
 	files := os.Args[1:]
 	if len(files) == 0 {
+		counts := make(map[string]int)
 		countLines(os.Stdin, counts)
 	} else {
 		for _, arg := range files {
+			counts := make(map[string]int)
 			f, err := os.Open(arg)
 			if err != nil {
 				fmt.Fprintf(os.Stderr, "dup2: %v\n", err)
@@ -77,7 +79,7 @@ func modifiedDup2() {
 				}
 			}
 			if valve == true {
-				fmt.Printf(arg);
+				fmt.Printf("filename: %s\n", arg);
 			}
 			f.Close()
 		}
