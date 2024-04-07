@@ -18,10 +18,6 @@ const (
 	greenIndex = 2
 )
 
-func main() {
-	lissajous()
-}
-
 func lissajous() {
 	//lissajous1(os.Stdout)
 	lissajous2(os.Stdout)
